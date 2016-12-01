@@ -25,7 +25,7 @@ SECRET_KEY = 'ck1a!r0d!&=r+wtuqg4cv3svfxykwtj!-gnywawt1tx4%ts$-4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #### installed app ####
+    'rest_framework',
+    'registration',
+    ###### my app ######
+    'home',
+    'chrome',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +62,7 @@ ROOT_URLCONF = 'qalantir.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,3 +107,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS= (
+    os.path.join(BASE_DIR, "assets"),
+)
+
+###rest security:
+# REST_FRAMEWORK={
+#     'DEFAULT_PERMISSION_CLASSES':[
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.AllowAny',
+    ]
+}
