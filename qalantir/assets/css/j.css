@@ -20,7 +20,9 @@ body {
     font-family: 'Blender'; 
     src: url("blender.ttf");
 }
-
+/*************************************
+     Horizontal Alignment Stuff
+**************************************/
 * {
     box-sizing: border-box;
 }
@@ -47,6 +49,9 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+/*************************************
+                 
+**************************************/
 .orfont a:link {
 color: #FFA500;
 text-decoration:None;
@@ -217,7 +222,9 @@ text-decoration:underline;
     color: 	#e53238;
 }
 .descript{
-    color:#f4ae01	;
+    color:#f4ae01;
+    
     font-family: "Blender","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:20px;
+    font-weight:700;
 }
