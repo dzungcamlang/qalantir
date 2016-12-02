@@ -24,6 +24,12 @@ from rest_framework import mixins
 from rest_framework import generics
 from django.views.decorators.csrf import csrf_exempt
 
+
+
+class ChromeListAPIView(ListAPIView):
+    queryset= ChromeModel.objects.all()
+    serializer_class=ChromeSerializer
+
 @csrf_exempt
 def chromepost(request):
     chromedata = {
