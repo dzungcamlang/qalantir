@@ -29,6 +29,16 @@ from django.views.decorators.csrf import csrf_exempt
 class ChromeListAPIView(ListAPIView):
     queryset= ChromeModel.objects.all()
     serializer_class=ChromeSerializer
+class CreateDetailAPIView(CreateAPIView):
+    queryset = ChromeModel.objects.all()
+    serializer_class=ChromeSerializer
+    lookup_field="user"
+    lookup_url_kwarg="user"
+class UpdateDetailAPIView(UpdateAPIView):
+    queryset = ChromeModel.objects.all()
+    serializer_class=ChromeSerializer
+    lookup_field="user"
+    lookup_url_kwarg="user"
 
 @csrf_exempt
 def chromepost(request):

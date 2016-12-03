@@ -6,6 +6,6 @@ class ChromeSerializer(ModelSerializer):
     class Meta:
         model = ChromeModel
         fields=[
-            'company',
-            'recruiter',
+            'user',
+            'msg',
             ]

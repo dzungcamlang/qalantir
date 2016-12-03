@@ -25,8 +25,8 @@ urlpatterns=[
     
     url(r'^$', ChromeListAPIView.as_view(), name='list'),
 
-    # url(r'^create/$', CreateDetailAPIView.as_view(), name='create'),
-    # url(r'^update/$', UpdateDetailAPIView.as_view(), name='update'),
+    url(r'^create/$', CreateDetailAPIView.as_view(), name='create'),
+    url(r'^update/$', UpdateDetailAPIView.as_view(), name='update'),
     # url(r'^destroy/$', DestroyDetailAPIView.as_view(), name='destroy'),
     # url(r'^(?P<company>[\w-]+)/$', ChromeDetailAPIView.as_view(), name='detail'),
     # url(r'^(?P<company>[\w-]+)/destroy/$', DestroyDetailAPIView.as_view(), name='destroy'),
