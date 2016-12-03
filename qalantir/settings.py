@@ -106,7 +106,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT= os.path.join(BASE_DIR,"static_cdn")
+MEDIA_ROOT= os.path.join(BASE_DIR,"media_cdn")
+
+STATIC_URL = 'qalantir.herokuapp.com/static/'
 MEDIA_URL='/media/'
 
 
@@ -115,8 +118,7 @@ STATICFILES_DIRS= (
 )
 
 
-STATIC_ROOT= os.path.join(BASE_DIR,"static_cdn")
-MEDIA_ROOT= os.path.join(BASE_DIR,"media_cdn")
+
 
 ###rest security:
 # REST_FRAMEWORK={
