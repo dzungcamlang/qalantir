@@ -2,6 +2,7 @@ Django==1.8.16
 django-location-field==1.6.1
 django-registration==2.1.2
 djangorestframework==3.4.7
+gunicorn==19.6.0
 oauthlib==2.0.0
 Pillow==3.4.2
 reportlab==3.3.0
