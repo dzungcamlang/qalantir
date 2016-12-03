@@ -12,9 +12,11 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf import settings
+from django.conf.urls import url,include
+from django.conf.urls.static import static
 from django.contrib import admin
-
+from django.contrib.auth.views import login
 ####
 from home import views as home_views
 from chrome.api.views import chromepost
@@ -26,3 +28,5 @@ urlpatterns = [
     url(r'^apipost/.*$',chromepost,name='chromepost'),
     url(r'^$',home_views.home,name="home")
 ]
+
+urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # for json uploads
