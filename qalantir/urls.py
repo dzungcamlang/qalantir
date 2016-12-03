@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^$',home_views.home,name="home")
 ]
 
+urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATIC_ROOT) # for json uploads
 urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # for json uploads

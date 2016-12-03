@@ -109,7 +109,7 @@ USE_TZ = True
 STATIC_ROOT= os.path.join(BASE_DIR,"static_cdn")
 MEDIA_ROOT= os.path.join(BASE_DIR,"media_cdn")
 
-STATIC_URL = 'http://qalantir.herokuapp.com/static/'
+STATIC_URL = '/static/'
 MEDIA_URL='/media/'
 
 
