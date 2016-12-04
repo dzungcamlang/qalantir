@@ -49,7 +49,7 @@ def chromepost(request):
     form = ChromePosts(
         chromedata
     )
-    result=urllib2.urlopen("www.qalantir.com/api/chrome/create/", urllib.urlencode(chromedata))
+    result=urllib2.urlopen("http://www.qalantir.com/api/chrome/create/", urllib.urlencode(chromedata))
     content= result.read()
-    return render(request,"home.html",{})
+    return render(request,"home_templates/home.html",{})
    # return render(request,"homepage_templates/redir.html", {'form': form, 'auth_url': auth_url})
