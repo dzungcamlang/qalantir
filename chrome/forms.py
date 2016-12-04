@@ -9,7 +9,7 @@ class ChromePosts(forms.ModelForm):
         #fields= ['title','context','after','initial']
         fields=['user','msg']
     def __init__(self, *args, **kwargs):
-        super(RecruitPosts, self).__init__(*args, **kwargs)
+        super(ChromePosts, self).__init__(*args, **kwargs)
         self.fields['user'].widget.attrs['placeholder'] ='Please insert the company name here'
         self.fields['user'].label='' #this erases the item tag
         self.fields['msg'].widget.attrs['placeholder'] ='Your name here'
