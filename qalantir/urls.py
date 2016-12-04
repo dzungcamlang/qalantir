@@ -20,6 +20,7 @@ from django.contrib.auth.views import login
 ####
 from home import views as home_views
 from chrome.api.views import chromepost
+
 ####
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -27,8 +28,9 @@ urlpatterns = [
     url(r'^api/chrome/',include("chrome.api.urls",namespace='chrome-api')),
     url(r'^apipost/.*$',chromepost,name='chromepost'),
     url(r'^$',home_views.home,name="home"),
-    url(r'^/*$',home_views.home,name="home")
+    # url(r'^/*$',home_views.home,name="home")
 ]
 
 urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATIC_ROOT) # for json uploads
 urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # for json uploads
+
