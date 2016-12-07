@@ -9,9 +9,7 @@ def speechHome(request):
     if form.is_valid():
         variable = form.save(commit='false')
         variable.save() 
-        print variable.id,"formid"
-        redirectstring="/granite/"+str(variable.id)
-        print redirectstring
+
         return HttpResponseRedirect("/granite/"+str(variable.id))
         
     else:
@@ -27,9 +25,8 @@ def speechHome(request):
 
 def speechGranite(request, id=None):
     template="speech_templates/granite.html"
-
-
     curnum= int(id)
+    print curnum
     wow=SpeechModel
 
     text= wow.objects.get(id=curnum).lines

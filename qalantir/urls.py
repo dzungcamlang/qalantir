@@ -26,9 +26,9 @@ from speech import views as speech_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^speech/$',speech_views.speechHome,name="speech"),
-    
+    url(r'^granite/$',speech_views.speechHome,name="speechHomeGranite"),
     url(r'^granite/(?P<id>\d+)/$',speech_views.speechGranite,name="speechGranite"),
-    # url(r'^granite/',speech_views.speechHome,name="speechHomeGranite"),
+    
     url(r'^api-auth/',include('rest_framework.urls',namespace="rest_framework")),
     url(r'^api/chrome/',include("chrome.api.urls",namespace='chrome-api')),
     url(r'^apipost/.*$',chromepost,name='chromepost'),
