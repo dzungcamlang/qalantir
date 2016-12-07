@@ -1,0 +1,53 @@
+<!-- 
+    J
+-->
+{% load staticfiles %}
+
+<div class="block_container"> 
+    <div class="inner_container">
+        <div class="coredescript" style="text-align:center;">
+            <img src="{% static 'img/Qwhite.png' %}" width="100px"height="120px"></br>
+            <!--<span class="lagrangian">Granite</span>-->
+           
+            <span class="output">{{text}}</span>
+            </br>
+            <div class= "play">
+           
+
+            <button onclick="read()">► Play</button>
+            </div>
+            </br>
+           
+           
+                
+         
+            
+        </div>
+        <div class="blender"><div id= "displaytime"></div></div>
+    </div>
+</div>
+
+</body>
+<link href="{% static 'css/speech/speech.css' %}" rel="stylesheet">
+
+<script src="{% static 'js/responsivevoice.js' %}"></script>
+<script src="{% static 'js/speech.js' %}"></script>
+<script> 
+let readItOnce = false;
+function read(){
+    responsiveVoice.cancel();
+    const readIt = () => {
+        readItOnce = true;
+
+        responsiveVoice.speak("{{text}}","{{voicetype}}");
+    }
+    if (!readItOnce) { setTimeout(readIt, 300)}
+    else { readIt(); }
+}
+function overall(){
+    setTimeout(function (){}, 1000);
+    read();
+}
+window.onload = overall();
+
+</script>

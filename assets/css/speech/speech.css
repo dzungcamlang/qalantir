@@ -165,17 +165,6 @@ text-decoration:underline;
 
 }
 .wow-form textarea{
-	font-family: 'Blender', sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.wow-form select{
   font-family: 'Blender', sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -184,7 +173,18 @@ text-decoration:underline;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
+}
+.wow-form select{
+  font-family: 'Blender', sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding:15px;
+  box-sizing: border-box;
+  font-size: 20px;
 }
 .wow-form button{
  font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -247,6 +247,10 @@ text-decoration:underline;
 .granite{
     color: #4CAF50;
 }
+.output{
+    color: #4CAF50;
+    font-size:100px;
+}
 .lagrangian{
     color: #ffffff;
 }
@@ -260,4 +264,22 @@ text-decoration:underline;
     font-family: "Blender","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size:20px;
     font-weight:700;
+}
+
+
+
+.play button{
+ font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: 0;
+  background:  #43A047;
+  width: 6%;
+  border: 0;
+  padding: 10px;
+  margin-top:20px;
+  color: #FFF;
+  font-size: 20px;
+  cursor: pointer;
+}
+.play button:hover,.form button:active,.form button:focus {
+  background: #18e687;
 }

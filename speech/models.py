@@ -9,8 +9,9 @@ for x in xrange(len(temp)):
     new.append([temp[x],temp[x]])
 wow=[['uk',"UK English Female"],['ukz',"UK English Male"]]
 
-class SpeechModel(models.Model): ### lets 
-    lines =models.TextField(max_length=100)
+class SpeechModel(models.Model): ### lets
+    id = models.AutoField(primary_key=True) 
+    lines =models.TextField(max_length=1000)
     voice=models.CharField(max_length=50,choices=new,default="UK English Female")
     def __unicode__(self):   
         return self.lines
@@ -22,8 +23,10 @@ class SpeechForm(forms.ModelForm):
         fields=['lines','voice']
     def __init__(self, *args, **kwargs):
         super(SpeechForm, self).__init__(*args, **kwargs)
-        self.fields['lines'].widget.attrs['placeholder'] ='Type your speech here'
+        self.fields['lines'].widget.attrs['placeholder'] ='Type your speech here. Press Preview to preview. Press Submit to create a unique url.'
         self.fields['lines'].label='' #this erases the item tag
+    
+        self.fields['voice'].label='' #this erases the item tag
 
 
 
