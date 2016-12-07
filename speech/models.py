@@ -12,7 +12,7 @@ wow=[['uk',"UK English Female"],['ukz',"UK English Male"]]
 class SpeechModel(models.Model): ### lets
     id = models.AutoField(primary_key=True) 
     lines =models.TextField(max_length=1000)
-    voice=models.CharField(max_length=50,choices=new,default="UK English Female")
+    voice=models.CharField(max_length=50,choices=new,default="French Female")
     def __unicode__(self):   
         return self.lines
 ##### Form Handler
