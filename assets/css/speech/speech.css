@@ -186,7 +186,7 @@ text-decoration:underline;
   box-sizing: border-box;
   font-size: 20px;
 }
-.wow-form button{
+.button1{
  font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   outline: 0;
   background:  #43A047;
@@ -197,8 +197,22 @@ text-decoration:underline;
   font-size: 20px;
   cursor: pointer;
 }
-.wow-form button:hover,.form button:active,.form button:focus {
+.button2{
+ font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: 0;
+  background:  #aa0000;
+  width: 30%;
+  border: 0;
+  padding: 15px;
+  color: #FFF;
+  font-size: 20px;
+  cursor: pointer;
+}
+.button1:hover,.form button:active,.form button:focus {
   background: #18e687;
+}
+.button2:hover,.form button:active,.form button:focus {
+  background: #ff0000;
 }
 
 /*************************************
@@ -277,7 +291,7 @@ text-decoration:underline;
  font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   outline: 0;
   background:  #43A047;
-  width: 6%;
+  width: 8%;
   border: 0;
   padding: 10px;
   margin-top:20px;
@@ -287,4 +301,27 @@ text-decoration:underline;
 }
 .play button:hover,.form button:active,.form button:focus {
   background: #18e687;
+}
+
+.pause button{
+ font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: 0;
+  background:  #aa0000;
+  width: 8%;
+  border: 0;
+  padding: 10px;
+  margin-top:20px;
+  color: #FFF;
+  font-size: 20px;
+  cursor: pointer;
+}
+.pause button:hover,.form button:active,.form button:focus {
+  background: #990000;
+}
+.wow-container{
+      background: #FFFFFF;
+  max-width: 80%;
+  margin: 0 auto 80px;
+  padding: 20px;
+  text-align: center;
 }

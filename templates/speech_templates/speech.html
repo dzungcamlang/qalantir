@@ -16,8 +16,10 @@
                 <div class=wow-form>
                 {{ formvar }}
                 </br>
-                <button type="button" onclick="preview()">Preview</button>
-                <button type="submit">Submit</button>
+                <button class="button1" type="button" onclick="preview()">Preview</button>
+                <button class="button2" type="button" onclick="pause()">❚❚ Pause</button>
+                <button class="button1" type="submit">Submit</button>
+                
                 </div>
             </form>
             
@@ -31,3 +33,9 @@
 
 <script src="{% static 'js/responsivevoice.js' %}"></script>
 <script src="{% static 'js/speech.js' %}"></script>
+
+<script>
+function pause(){
+    responsiveVoice.cancel();
+}
+</script>

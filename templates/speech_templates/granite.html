@@ -11,12 +11,10 @@
             <!--<span class="lagrangian">Granite</span>-->
            
             <div class="output">{{text}}</div>
-      
-            <div class= "play">
-           
 
-            <button onclick="read()">► Play</button>
-            </div>
+            <span class= "play"><button onclick="read()">► Play</button></span>
+            <span class="pause"><button onclick="pause()">❚❚ Pause</button></span>
+ 
             </br>
            
            
@@ -46,6 +44,9 @@ function read(){
     }
     if (!readItOnce) { setTimeout(readIt, 300)}
     else { readIt(); }
+}
+function pause(){
+    responsiveVoice.cancel();
 }
 function overall(){
     setTimeout(function (){}, 1000);
