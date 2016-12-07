@@ -33,6 +33,9 @@ def speechGranite(request, id=None):
     wow=SpeechModel
 
     text= wow.objects.get(id=curnum).lines
+    # print text, "wow"
+    text= text.replace("\r\n"," ")
+    print text
     voicetype= wow.objects.get(id=curnum).voice
     context={ 
         "text":text,

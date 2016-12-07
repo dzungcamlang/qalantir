@@ -39,7 +39,9 @@ function read(){
     responsiveVoice.cancel();
     const readIt = () => {
         readItOnce = true;
-
+     
+   
+        
         responsiveVoice.speak("{{text}}","{{voicetype}}");
     }
     if (!readItOnce) { setTimeout(readIt, 300)}
