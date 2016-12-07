@@ -1,0 +1,40 @@
+<!-- 
+    J
+-->
+{% load staticfiles %}
+<body>
+<div class="block_container"> 
+    <div class="inner_container">
+        <div class="coredescript" style="text-align:center;">
+            <img src="{% static 'img/Qwhite.png' %}" width="100px"height="120px"></br>
+            <span class="lagrangian">Granite</span>
+            <span class="granite">voice</span>
+            <span class="api">api</span>
+            </br>
+            <form method = 'POST' action=''>{% csrf_token %}
+                <div class=wow-form>
+                {{ formvar }}
+                <button type="button" onclick="preview()">Preview</button>
+                <button type="submit">Submit</button>
+                </div>
+            </form>
+            
+        </div>
+        <div class="blender"><div id= "displaytime"></div></div>
+    </div>
+</div>
+
+</body>
+<link href="{% static 'css/speech/speech.css' %}" rel="stylesheet">
+
+<script src="{% static 'js/responsivevoice.js' %}"></script>
+<script src="{% static 'js/speech.js' %}"></script>
+<script>
+    var voicelist = responsiveVoice.getVoices();
+    vlist=[];
+    for (var i=0;i<voicelist.length;i++){
+        vlist.push(voicelist[i].name);
+    }
+    console.log(vlist);
+    document.getElementById("voices").innerHTML=vlist;
+</script>
