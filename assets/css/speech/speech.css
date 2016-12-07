@@ -249,7 +249,12 @@ text-decoration:underline;
 }
 .output{
     color: #4CAF50;
-    font-size:100px;
+    /*background:#fff;*/
+    max-width:  80%;
+    font-size:30px;
+     margin: 0 auto 0px;
+  padding: 20px;
+  text-align: center;
 }
 .lagrangian{
     color: #ffffff;
