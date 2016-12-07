@@ -158,13 +158,13 @@ text-decoration:underline;
 **************************************/
 .wow-form{
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 80%;
   margin: 0 auto 80px;
   padding: 20px;
   text-align: center;
 
 }
-.wow-form input{
+.wow-form textarea{
 	font-family: 'Blender', sans-serif;
   outline: 0;
   background: #f2f2f2;
@@ -175,16 +175,26 @@ text-decoration:underline;
   box-sizing: border-box;
   font-size: 14px;
 }
+.wow-form select{
+  font-family: 'Blender', sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 .wow-form button{
-	 font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ font-family: 'Blender', 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   outline: 0;
   background:  #43A047;
-  width: 50%;
+  width: 30%;
   border: 0;
   padding: 15px;
   color: #FFF;
   font-size: 20px;
- 
   cursor: pointer;
 }
 .wow-form button:hover,.form button:active,.form button:focus {
