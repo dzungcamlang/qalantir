@@ -7,7 +7,7 @@ temp=["UK English Female", "UK English Male", "US English Female", "Arabic Male"
 new=[]
 for x in xrange(len(temp)):
     new.append([temp[x],temp[x]])
-wow=[['uk',"UK English Female"],['ukz',"UK English Male"]]
+
 
 class SpeechModel(models.Model): ### lets
     id = models.AutoField(primary_key=True) 
