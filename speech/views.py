@@ -42,3 +42,13 @@ def speechGranite(request, id=None):
         
     }
     return render(request,template,context)
+def capitalism(request, id=None):
+    template="speech_templates/capitalism.html"
+    
+
+  
+    context={ 
+        
+        
+    }
+    return render(request,template,context)

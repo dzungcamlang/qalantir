@@ -1,0 +1,57 @@
+<!-- 
+    J
+-->
+{% load staticfiles %}
+
+<div class="block_container"> 
+    <div class="inner_container">
+        <div class="coredescript" style="">
+            </br>
+            <img src="{% static 'img/lol.png' %}" width="100px"height="120px"></br>
+            <!--<span class="lagrangian">Granite</span>-->
+           
+            <div class="cwf">Капитализм будет падать!</div>
+
+            <span class= "play"><button onclick="read()">► Play</button></span>
+            <span class="pause"><button onclick="pause()">❚❚ Pause</button></span>
+ 
+            </br>
+           
+           
+                
+         
+            
+        </div>
+        <div class="blender"><div id= "displaytime"></div></div>
+    </div>
+</div>
+
+</body>
+<link href="{% static 'css/speech/speech.css' %}" rel="stylesheet">
+
+<script src="{% static 'js/responsivevoice.js' %}"></script>
+<script src="{% static 'js/speech.js' %}"></script>
+<script> 
+let readItOnce = false;
+function read(){
+    responsiveVoice.cancel();
+    const readIt = () => {
+        readItOnce = true;
+     
+   
+        
+        responsiveVoice.speak("Капитализм будет падать!","Russian Female");
+    }
+    if (!readItOnce) { setTimeout(readIt, 300)}
+    else { readIt(); }
+}
+function pause(){
+    responsiveVoice.cancel();
+}
+function overall(){
+    setTimeout(function (){}, 1000);
+    read();
+}
+window.onload = overall();
+
+</script>

@@ -270,6 +270,15 @@ text-decoration:underline;
   padding: 20px;
   text-align: center;
 }
+.cwf{
+    color: #ff0000;
+    /*background:#fff;*/
+    max-width:  80%;
+    font-size:80px;
+     margin: 0 auto 0px;
+  padding: 20px;
+  text-align: center;
+}
 .lagrangian{
     color: #ffffff;
 }
