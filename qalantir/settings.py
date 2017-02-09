@@ -82,12 +82,23 @@ WSGI_APPLICATION = 'qalantir.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'HOST':"ec2-54-221-254-72.compute-1.amazonaws.com",
+        'NAME': "d6ul674vav8hso",
+        'USER':"luvfalthnaljvb",
+        'PORT':"5432",
+        'PASSWORD':"kk1xxoqs1yd3rche5CKy1ZHWgv",
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
     }
 }
+
 
 
 # Internationalization
