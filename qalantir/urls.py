@@ -19,20 +19,20 @@ from django.contrib import admin
 from django.contrib.auth.views import login
 ####
 from home import views as home_views
-from chrome.api.views import chromepost
+
 from speech import views as speech_views
 
 ####
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^speech/$',speech_views.speechHome,name="speech"),
+    url(r'^BND/(?P<path>.*)$',speech_views.BND,name="BND"),
+    # url(r'^speech/$',speech_views.speechHome,name="speech"),
     url(r'^granite/$',speech_views.speechHome,name="speechHomeGranite"),
     url(r'^granite/(?P<id>\d+)/$',speech_views.speechGranite,name="speechGranite"),
-    url(r'^BND/$',speech_views.capitalism,name="capitalism"),
-    url(r'^api-auth/',include('rest_framework.urls',namespace="rest_framework")),
-    url(r'^api/chrome/',include("chrome.api.urls",namespace='chrome-api')),
-    url(r'^apipost/.*$',chromepost,name='chromepost'),
+    url(r'^capitalism/$',speech_views.capitalism,name="capitalism"),
     url(r'^$',home_views.home,name="home")
+    
 ]
 
 urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATIC_ROOT) # for json uploads

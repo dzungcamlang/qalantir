@@ -15,17 +15,17 @@ class SpeechModel(models.Model): ### lets
     voice=models.CharField(max_length=50,choices=new,default="French Female")
     def __unicode__(self):   
         return self.lines
+
 ##### Form Handler
 class SpeechForm(forms.ModelForm):
     class Meta:
         model =SpeechModel
         #fields= ['title','context','after','initial']
-        fields=['lines','voice']
+        fields=['id','lines','voice']
     def __init__(self, *args, **kwargs):
         super(SpeechForm, self).__init__(*args, **kwargs)
         self.fields['lines'].widget.attrs['placeholder'] ='Type your speech here. Press Preview to preview. Press Submit to create a unique url.'
         self.fields['lines'].label='' #this erases the item tag
-    
         self.fields['voice'].label='' #this erases the item tag
 
 
